@@ -11,7 +11,11 @@ struct SimplePullToRefreshView: View {
     let progress: CGFloat
     
     var body: some View {
-        Text("Pull to refresh")
+        if progress >= 1.5 {
+            Text("松开立即刷新: \(progress)")
+        } else {
+            Text("下拉可以刷新: \(progress)")
+        }
     }
 }
 
